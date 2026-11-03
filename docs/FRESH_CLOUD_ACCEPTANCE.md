@@ -68,3 +68,19 @@ These results verify the executed Python checks in this attached runtime. They d
 not verify Windows MetaEditor compilation, MT5 backtesting, or an independent
 Codex Cloud task beyond this session. No paid services, YouTube skill installation,
 deployments, video uploads, or live trading were performed.
+
+## Observed recovery using supported sandbox escalation
+
+A native Git push using supported `require_escalated` execution reached GitHub
+through the unchanged configured proxy. It was rejected with `fetch first`
+because the authenticated connector had already created the task branch and
+saved this document in commit `c5f573aef7720660d8f87ee9757c770010e5db06`.
+That connector write was separate from native Git push.
+
+Escalated native Git fetch succeeded. The initial fetch did not create a task
+tracking ref; fetching explicit refspecs created it successfully. Merged
+`origin/docs/fresh-cloud-acceptance-20261103` without conflicts or force,
+preserving both the local and connector commits. No proxy, security, or
+credential settings were changed. The earlier proxy connection failure was
+therefore recoverable through supported execution escalation. Final native push
+and SHA verification are reported after committing this recovery record.
